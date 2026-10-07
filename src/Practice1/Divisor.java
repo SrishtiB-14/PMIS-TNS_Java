@@ -21,9 +21,19 @@ public class Divisor {
 		System.out.println("Enter value for b");
 		int b = sc.nextInt();
 		
-		int res = gcd(a,b);
+//		int res = gcd(a,b);
 		
-		System.out.println("GCD of "+a+" and "+b+" : "+res);
+		int gcd = 1;
+
+		for (int i = 1; i <= a && i <= b; i++) {
+		    if (a % i == 0 && b % i == 0) {
+		        gcd = i;
+		    }
+		}
+
+		System.out.println("GCD = " + gcd);
+		
+//		System.out.println("GCD of "+a+" and "+b+" : "+res);
 		
 	}
 
